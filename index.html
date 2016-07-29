@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>测试关于为元素设置为display:inline-block之后元素之间出现间隙的问题</title>
+	<style type="text/css">
+		p{text-align: center;}
+		.demo01,.demo02{ width:327px; margin:0 auto;font-size:0; }
+		.demo01 li,.demo02 li{ display:inline-block; *display:inline; *zoom:1; width:100px; height:30px; border:1px solid #848484; background-color:#999;font-size:12px;vertical-align: top; }
+		.demo02 li.demo2li{padding-bottom:100px;}
+		
+	</style>
+</head>
+<body>
+	<ul class="demo01">
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+	</ul>
+	<p>正常的情况下（元素之间有间距）</p>
+	<br>
+	<ul class="demo02">
+		<li></li>
+		<li class="demo2li"></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+	</ul>
+	<p>第二个元素（li）padding-bottom:100px;</p>
+	
+</body>
+</html>
